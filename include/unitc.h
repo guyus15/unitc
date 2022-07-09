@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <float.h>
+#include <math.h>
 
 #define ASSERT_EQUAL(a, b)   (assert(a == b, #a, "==", a, __LINE__, __func__))
 #define ASSERT_LEQUAL(a, b)   (assert_long(a == b, #a, "==", a, __LINE__, __func__))
