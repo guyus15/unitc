@@ -9,7 +9,7 @@ OBJ_NAME = unitc.o
 LIB_DIR = lib
 LIB = libunitc
 
-INCLUDE = /include
+INCLUDE = include/
 
 # This is the target that compiles and archives the object files into a 
 # static library
