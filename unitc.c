@@ -44,6 +44,38 @@ int assert(char res, const char *subject, const char *eval, int actual,
 	return 0;
 }
 
+int assert_long(char res, const char *subject, const char *eval, int64_t actual,
+		int l_number, const char *func_name)
+{
+    if (res == 0)
+    {
+        printf("\033%s", error_colour); // Set the error colour
+        printf("Assertion failed (in %s:%d): Actual: %s %s %ld\n",
+                func_name, l_number, subject, eval, actual);
+        printf("\033%s", default_colour); // Set the default colour
+        test_passed = 0;
+        return -1;
+    }
+
+    return 0;
+}
+
+int assert_float(char res, const char *subject, const char *eval, float actual,
+		int l_number, const char *func_name)
+{
+    if (res == 0)
+    {
+        printf("\033%s", error_colour); // Set the error colour
+        printf("Assertion failed (in %s:%d): Actual: %s %s %f\n",
+                func_name, l_number, subject, eval, actual);
+        printf("\033%s", default_colour); // Set the default colour
+        test_passed = 0;
+        return -1;
+    }
+
+    return 0;
+}
+
 void set_before_each(void (*function)())
 {
 	before_each_function = function;
