@@ -111,16 +111,16 @@ static void after_each()
 
 static void test_1()
 {
-	test_name("test_1");
+    test_name("test_1");
 
-	ASSERT_EQUAL(1, 1);
+    ASSERT_EQUAL(1, 1);
 }
 
 static void test_2()
 {
-	test_name("test_2");
+    test_name("test_2");
 
-	ASSERT_GT(1, 2);
+    ASSERT_GT(1, 2);
 }
 
 
@@ -136,16 +136,16 @@ int main(int argc, char *argv[])
     set_before_each(before_each);
     set_after_each(after_each);
 
-	  void (*tests[])() =
-	  {
-		    test_1,
-		    test_2,
+    void (*tests[])() =
+    {
+        test_1,
+        test_2,
         test_3
     };
 
-	  run_tests(tests, 3);
-
-	  return 0;
+    run_tests(tests, 3);
+     
+    return 0;
 }
 ```
 ### Compiling Tests
