@@ -49,7 +49,7 @@ int assert_long(char res, const char *subject, const char *eval, int64_t actual,
     if (res == 0)
     {
         printf("\033%s", error_colour); // Set the error colour
-        printf("Assertion failed (in %s:%d): Actual: %s %s %ld\n",
+        printf("Assertion failed (in %s:%d): Actual: %s %s %lld\n",
                 func_name, l_number, subject, eval, actual);
         printf("\033%s", default_colour); // Set the default colour
         test_passed = 0;
