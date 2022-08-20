@@ -25,3 +25,4 @@ build:
 	ar rcs $(LIB_DIR)/$(LIB).a $(OBJ_NAME)
 	rm $(OBJ_NAME)
 
+all: build
